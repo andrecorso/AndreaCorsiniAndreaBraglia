@@ -10,7 +10,7 @@ We add some filters to make more easier your research:
  - **imgDominantColor**: Returns images of a specific dominant color.  
  _red, orange, yellow, green, teal, blue, purple, pink, white, gray, black and brown_;  
 
-###**Telegram Bot**  
+### **Telegram Bot**  
   We also created a Telegram Bot, named **Foxign** (`@ImgDownloader_bot`) ,   
   which allows you to have the photos that you have searched on the site
   directly in your Telegram's bot chat.  
