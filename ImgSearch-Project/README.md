@@ -1,2 +1,19 @@
-# **Search and Download images**
-We created a search engine called Foxign, which, using Google's APIs, returns us images. In the research you can put some filters. There are three filters: the first one is "imgType"; it return images of one type, that can be clipart, face, lineart, stock, photo and animated; the second filter is "imgColorType; it returns black and white, grayscale, or color images: mono, gray and color; the last filter is "imgDominantColor"; it returns images of a specific domiant color: red, orange, yellow, green, teal, blue, purple, pink, white, gray, black and brown. We also created a bot on telegram, called foxign bot (username = @ImgDownloader_bot) , which allows you to have the photos that you have searched on the site. Keys for APIs and bot's token will be given by the developers
+# **FOXING** 
+### **Engine for search and download images**
+We created a search engine called Foxign,
+which, using Google's APIs, returns us images. 
+We add some filters to make more easier your research:
+ - **imgType**: Return images of a specific type,  
+ _clipart, face, lineart, stock, photo and animated_; 
+ - **imgColorType**: Returns black and white.  
+  _grayscale, or color images: mono, gray and color_; 
+ - **imgDominantColor**: Returns images of a specific dominant color.  
+ _red, orange, yellow, green, teal, blue, purple, pink, white, gray, black and brown_;  
+
+###**Telegram Bot**  
+  We also created a Telegram Bot, named **Foxign** (`@ImgDownloader_bot`) ,   
+  which allows you to have the photos that you have searched on the site
+  directly in your Telegram's bot chat.  
+  
+  
+  _Keys for APIs and bot's token will be given by the developers_
