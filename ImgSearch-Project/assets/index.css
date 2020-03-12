@@ -1,0 +1,164 @@
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.3s 2.5s;
+  animation: fadein 0.5s, fadeout 0.3s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+:root{
+  --bg-color: #2c122b;
+  --text-color: white;
+  --secondary: #881232;
+}
+textarea, select, input, button { outline: none !important; }
+::placeholder { color: whitesmoke; }
+
+body {
+  font-family: 'Sanchez', serif;
+  /*font-family: 'Lato', sans-serif;*/
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+}
+.button-transition {
+  margin: 1% auto;
+  -webkit-box-flex: 1;
+  position: relative;
+  border:  0.2rem solid var(--secondary);
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: .35s;
+  transition: .35s;
+}
+
+.button-transition:hover:after {
+  left: -10%;
+  width: 120%;
+}
+
+.button-transition:after {
+  position: absolute;
+  -webkit-transition: .35s;
+  transition: .35s;
+  content: '';
+  width: 0;
+  top: 0;
+  height: 100%;
+  left: -10%;
+  -webkit-transform: skewX(15deg);
+  transform: skewX(15deg);
+  z-index: -1;
+  background-color: var(--secondary);
+}
+
+#search-box, #options{
+  margin: auto;
+}
+
+.inputs {
+  border:  0.2rem solid var(--secondary);
+  background-color: var(--secondary);
+  margin-top: 2%;
+  width: 35%;
+  color: var(--text-color);
+}
+
+#search-button {
+  width: 20%;
+}
+select {
+  text-align: center;
+  margin: 2% 2%;
+}
+
+#telegram {
+  width: 17%;
+  position: fixed;
+  bottom: 0;
+}
+
+a, #telegram-id {
+  margin-left:1%;
+  padding-left: 0;
+  float: left;
+  text-align: left;
+}
+
+.card {
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  background: var(--secondary);
+  padding: 1%;
+  border:  0.2rem solid var(--text-color)
+}
+.card img {
+  border: black;
+  width: 40%;
+  margin: auto;
+}
+.card-body p{
+  text-decoration: underline;
+}
+
+.tl-button {
+  padding: 2%;
+  margin: 2% 31%;
+  background-color: var(--bg-color);
+  color: var(--text-color)
+}
+
+#telegram-img {
+  margin-left: 1%;
+  float: left;
+  width: 12%;
+}
+
+#telegram-id {
+  width: 11%;
+}
+
+#a {
+  background-color: white;
+  color: #333333;
+}

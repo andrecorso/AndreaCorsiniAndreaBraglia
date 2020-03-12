@@ -3,18 +3,94 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!--Import Bootstrap-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<!--Import Google Icon/Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato|Sanchez&display=swap" rel="stylesheet">
+		<!--		Import animations-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+		<!--Import customs css/js-->
 		<link rel="stylesheet" href="assets/index.css">
-		<title>Hello, world!</title>
-	</head>
-	<body>
-		<h1>Hello, world!</h1>
+		<script
+				src="https://code.jquery.com/jquery-3.4.1.js"
+				integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+				crossorigin="anonymous"></script>
+		<!--		Import Google Apis-->
+		<script src="https://apis.google.com/js/api.js"></script>
 
-		<!-- Optional JavaScript -->
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<title>The Corsers</title>
+	</head>
+	<body class="text-center">
+
+
+
+		<h1>The Corsers Imagines search </h1>
+
+		<div id="search-box" class="container">
+			<input type="text" id="q" placeholder="Search..." class="inputs">
+			<div id="options" class="row"></div>
+			<div class="button-transition" onclick="start()" for="search-bar" id="search-button"> <i class="material-icons">
+				image_search
+			</i> Search </div>
+		</div>
+
+		<!-- Taost -->
+		<div id="snackbar"></div>
+
+		<!--		Container -->
+		<div id="container" class="infinite-list"></div>
+		<div id="telegram" class="align-bottom container" >
+			<div class="row">
+				<input type="text" id="telegram-id" placeholder="Insert telegram ID" class="inputs col-sm">
+			</div>
+			<div class="row">
+				<div class="col-sm rounded" id="a">
+					<a href="https://t.me/ImgDownloader_bot" target="_blank" class="text-primary align-middle"> @ImgDownloader_bot	</a>
+					<img id="telegram-img" src="https://cdn3.iconfinder.com/data/icons/popular-services-brands-vol-2/512/telegram-512.png" alt="Telegram icon" class="img-fluid">
+				</div>
+			</div>
+
+		</div>
+		<script src="assets/htmlBuilder.js" crossorigin="anonymous"></script>
+		<script>
+			const parameters = {
+				url: "https://www.googleapis.com/customsearch/v1?",
+				q : "",
+				cx: "",
+				searchType: "image",
+				imgType: "",
+				imgColorType: "",
+				imgDominantColor: "",
+				imgSize : "medium",
+				start : 0,
+				num : 10
+			}
+
+			const telegramRequirements = {
+				BotName: "@ImgDowloader_bot",
+				usrTelegram: "",
+				BotToken: ""
+			}
+
+			$(document).ready(function() {
+				const win = $(window)
+				win.scroll(function() {
+					if ($(document).height() - win.height() === win.scrollTop() ) {
+						start()
+					}
+				})
+			})
+
+		</script>
+
+
+		<script src="assets/main.js" crossorigin="anonymous"></script>
+		<script src="assets/telegram.js" crossorigin="anonymous"></script>
+		<script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};loadClient()"></script>
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-		<script src="assets/main.js" crossorigin="anonymous"></script>
+
 	</body>
 </html>
