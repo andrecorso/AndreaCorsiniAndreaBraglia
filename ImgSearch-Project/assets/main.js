@@ -42,9 +42,18 @@ function start() {
   
 }
 
+function toast (msg){
+  const x = document.getElementById("snackbar")
+  x.className = "show"
+  x.innerHTML = msg
+  setTimeout(() => {
+    x.className = x.className.replace("show", "")
+  }, 3000)
+}
 
 function paginator (items) {
   const container = document.getElementById("container")
+  if (parameters.start === 21) container.innerHTML = ""
   
   items.forEach(({ title, image: { contextLink }, displayLink, link }) => {
     const el = []
@@ -52,8 +61,9 @@ function paginator (items) {
       { element: "img", attribute: { src : link, alt: "..." } },
       { name: "cardBody", element: "div", attribute: { class : "card-body" } },
       { element: "h5", attribute: { class : "card-title", innerText: title } },
-      { element: "p", attribute: { class: "card-text", innerText: "Domain: " + contextLink } },
-      { element: "button", attribute: { class: "rounded tl-button", type: "submit", onclick: `idFind("${displayLink}", "${link}")`, innerText: "Send Img with telegram" }
+      { element: "p", attribute: { class: "card-text", innerText: "Domain:" } },
+      { element: "a", attribute: { innerText : " " + contextLink, href: contextLink, target:"__blank" } },
+      { element: "button", attribute: { class: "rounded tl-button", type: "submit", onclick: `idFind("${displayLink}", "${link}")`, innerText: "Send with telegram" }
       }].forEach((e, i, arr) => {
       const x = document.createElement(e.element)
       
@@ -71,7 +81,8 @@ function paginator (items) {
       el.push(z)
     })
     
-    ;[{ container:"cardBody", child: ["h5", "p", "button"] },
+    ;[{ container: "p", child: ["a"] },
+      { container:"cardBody", child: ["h5", "p", "button"] },
       { container: "cardDiv", child: ["img", "cardBody"]
       }].forEach(({ container, child }) => {
       child.forEach(e => {
