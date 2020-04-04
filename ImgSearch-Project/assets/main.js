@@ -8,8 +8,7 @@ function checkParam () {
     { placeholder: "imgColorType", options: "color gray mono" },
     { placeholder: "imgDominantColor", options: "black blue brown gray green orange pink purple red teal white yellow"
     }].forEach(({ placeholder, options }) => {
-    const trusted = options.split(" ").filter(opt => parameters[placeholder] === opt ? opt : "").join("")
-    parameters[placeholder] = trusted
+    parameters[placeholder] = options.split(" ").filter(opt => parameters[placeholder] === opt ? opt : "").join("")
   })
 }
 
