@@ -112,15 +112,11 @@
       }
 
 
-      // $(document).ready
-      (function() {
-        const win = $(window)
-        win.scroll(function() {
-          if ($(document).height() - win.height() === win.scrollTop() ) {
+       $(window).scroll(function () { 
+         if ($(document).height() - $(window).height() === $(window).scrollTop()) {
             start()
-          }
-        })
-      })();
+         }
+      })
 
     </script>
 
