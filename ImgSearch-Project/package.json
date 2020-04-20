@@ -1,0 +1,16 @@
+{
+  "name": "imgsearch-project",
+  "version": "1.0.0",
+  "description": "We created a search engine called Foxign, which, using Google's APIs, returns us images.      We add some filters to make more easier your research:  - **imgType**: Return images of a specific type,    _clipart, face, lineart, stock, photo and animated_;   - **imgColorType**: Returns black and white.     _grayscale, or color images: mono, gray and color_;   - **imgDominantColor**: Returns images of a specific dominant color.    _red, orange, yellow, green, teal, blue, purple, pink, white, gray, black and brown_;",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
+  }
+}

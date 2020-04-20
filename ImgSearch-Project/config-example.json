@@ -1,0 +1,14 @@
+{
+  "google": {
+    "apiKey": "",
+    "url": "https://www.googleapis.com/customsearch/v1?",
+    "cx": "",
+    "searchType": "image",
+    "imgSize" : "medium"
+  },
+  "telegramBot": {
+    "name": "@ImgDowloader_bot",
+    "token": ""
+  },
+  "port": 8080
+}
